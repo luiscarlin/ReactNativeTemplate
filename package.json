@@ -11,6 +11,7 @@
     "lint:fix": "eslint src/ --fix"
   },
   "dependencies": {
+    "babel-core": "^7.0.0-bridge",
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.3"
   },
@@ -27,5 +28,11 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "npm test"
+    }
   }
 }
